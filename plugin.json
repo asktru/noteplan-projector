@@ -1,0 +1,70 @@
+{
+  "noteplan.minAppVersion": "3.9.0",
+  "macOS.minVersion": "10.13",
+  "plugin.id": "asktru.Projector",
+  "plugin.name": "🎬 Projector",
+  "plugin.changelog": "https://github.com/asktru/noteplan-projector/blob/main/CHANGELOG.md",
+  "plugin.description": "Set a note's type (project/area/note) and status, styling its icon and icon-color to match.",
+  "plugin.icon": "fa-clapperboard",
+  "plugin.author": "asktru",
+  "plugin.version": "1.0.0",
+  "plugin.lastUpdateInfo": "Initial release: commands to set note type (project/area/note) and status, with matching icon + icon-color.",
+  "plugin.dependencies": [],
+  "plugin.script": "script.js",
+  "plugin.commands": [
+    {
+      "name": "Set type: Project",
+      "alias": ["project", "type"],
+      "description": "Mark the current note as a project and style it",
+      "jsFunction": "setTypeProject"
+    },
+    {
+      "name": "Set type: Area",
+      "alias": ["area", "type"],
+      "description": "Mark the current note as an area and style it",
+      "jsFunction": "setTypeArea"
+    },
+    {
+      "name": "Set type: Note",
+      "alias": ["note", "type", "clear"],
+      "description": "Make the current note a plain note (clear icon/color/status)",
+      "jsFunction": "setTypeNote"
+    },
+    {
+      "name": "Set status: Active",
+      "alias": ["status", "active"],
+      "description": "Set the current project/area status to Active",
+      "jsFunction": "setStatusActive"
+    },
+    {
+      "name": "Set status: Working",
+      "alias": ["status", "working"],
+      "description": "Set the current project/area status to Working",
+      "jsFunction": "setStatusWorking"
+    },
+    {
+      "name": "Set status: Paused",
+      "alias": ["status", "paused"],
+      "description": "Set the current project/area status to Paused",
+      "jsFunction": "setStatusPaused"
+    },
+    {
+      "name": "Set status: Someday",
+      "alias": ["status", "someday"],
+      "description": "Set the current project/area status to Someday",
+      "jsFunction": "setStatusSomeday"
+    },
+    {
+      "name": "Set status: Completed",
+      "alias": ["status", "completed"],
+      "description": "Set the current project status to Completed",
+      "jsFunction": "setStatusCompleted"
+    },
+    {
+      "name": "Set status: Canceled",
+      "alias": ["status", "canceled"],
+      "description": "Set the current project status to Canceled",
+      "jsFunction": "setStatusCanceled"
+    }
+  ]
+}
